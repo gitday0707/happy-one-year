@@ -167,6 +167,7 @@ body{
     border-radius:30px;
 
     padding:45px;
+    margin-bottom: 20px;
 
     box-shadow:0 20px 50px rgba(255,105,180,.25);
     transition:opacity .6s ease,
@@ -520,6 +521,7 @@ h1{
 #submitBtn{
 
     margin-top:35px;
+    margin-bottom: 20px;
 
     width:100%;
 
