@@ -1,7 +1,6 @@
 let currentQuestion = 0;
 let lives = 3;
-const recapMusic = document.getElementById("recapMusic");
-const bgMusic = document.getElementById("bgMusic");
+const musicPlayer = document.getElementById("musicPlayer");
 
 function typeWriter(element, text, speed, callback) {
   let index = 0;
@@ -32,11 +31,14 @@ const tingSound = document.getElementById("tingSound");
 
 function startGame() {
   console.log("START GAME");
-  bgMusic.volume = 0.4;
+  musicPlayer.src = "music/background.mp3";
 
-  bgMusic.play().catch((err) => {
-    console.log("Không thể phát nhạc:", err);
-  });
+    musicPlayer.loop = true;
+
+    musicPlayer.volume = 0.4;
+
+    musicPlayer.play().catch(console.error);
+
 }
 
 const gameCard = document.querySelector(".game-card");
@@ -192,50 +194,31 @@ function finishGame() {
   switchToRecapMusic();
   showRecap();
 }
-function switchToRecapMusic(){
+function switchToRecapMusic() {
 
-    clearInterval(window.musicFadeInterval);
+    musicPlayer.pause();
 
-    bgMusic.pause();
+    musicPlayer.src = "music/recap.mp3";
 
-    bgMusic.currentTime = 0;
+    musicPlayer.load();
 
-    bgMusic.volume = 0.4;
+    musicPlayer.currentTime = 0;
 
-    recapMusic.pause();
+    musicPlayer.loop = true;
 
-    recapMusic.currentTime = 0;
+    musicPlayer.volume = 0.4;
 
-    recapMusic.volume = 0;
-
-    recapMusic.play().catch(console.error);
-
-    window.musicFadeInterval = setInterval(()=>{
-
-        recapMusic.volume = Math.min(0.4, recapMusic.volume + 0.02);
-
-        if(recapMusic.volume >= 0.4){
-
-            clearInterval(window.musicFadeInterval);
-
-        }
-
-    },100);
+    musicPlayer.play().catch(console.error);
 
 }
-function fadeOutMusic() {
-  const fade = setInterval(() => {
-    if (bgMusic.volume > 0.05) {
-      bgMusic.volume -= 0.05;
-    } else {
-      bgMusic.volume = 0;
+function stopMusic(){
 
-      bgMusic.pause();
+    musicPlayer.pause();
 
-      clearInterval(fade);
-    }
-  }, 100);
+    musicPlayer.currentTime = 0;
+
 }
+
 function showModal(title, message, callback) {
   document.getElementById("modalTitle").innerText = title;
 
@@ -514,18 +497,28 @@ const recapImages = [
 
 let recapIndex = 0;
 let recapInterval;
-function changeRecapImage() {
-  const image = document.getElementById("recapImage");
+function changeRecapImage(){
 
-  image.classList.add("fade");
+    const image = document.getElementById("recapImage");
 
-  setTimeout(() => {
-    image.onload = () => {
-      image.classList.remove("fade");
+    const preload = new Image();
+
+    preload.onload = function(){
+
+        image.classList.add("fade");
+
+        setTimeout(()=>{
+
+            image.src = preload.src;
+
+            image.classList.remove("fade");
+
+        },200);
+
     };
 
-    image.src = recapImages[recapIndex];
-  }, 100);
+    preload.src = recapImages[recapIndex];
+
 }
 function showRecap() {
   clearInterval(recapInterval);
