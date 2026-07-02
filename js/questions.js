@@ -13,7 +13,7 @@ const questions = [
 
         title: "Tin nhắn đầu tiên",
 
-        image: "/images/nhantinlandau.jpg",
+        image: "images/nhantinlandau.jpg",
 
         story: "A ơi, em đki link r nma bấm vào link lớp thì nó lỗi ạ:) A add e vào với. HEHE"
 
@@ -33,7 +33,7 @@ const questions = [
 
         title: "Lần đầu đi ăn chung",
 
-        image: "/images/bkz.jpg",
+        image: "images/bkz.jpg",
 
         story: "Người hoa mắt tụt huyết áp cùng người tóc bết đang ủ vào quán ăn gà."
 
@@ -53,7 +53,7 @@ const questions = [
 
         title: "Ngày yêu nhau",
 
-        image: "/images/theone.JPG",
+        image: "images/theone.JPG",
 
         story: "Đêm hôm ý thức cũng khuya á, em còn ngủ với mẹ may mà không đứng tim ra đấy"
 
@@ -73,7 +73,7 @@ const questions = [
 
         title: "Ngày tỏ tình",
 
-        image: "/images/ngaytotinh.jpg",
+        image: "images/ngaytotinh.jpg",
 
         story: "Lời tỏ tình văn chương đủ mở bài thân bài kết bài, mặc dù em cãi hơi ngang nhưng mà a chịu đựng được :)), chưa bao giờ thấy gian nan như hôm ý."
 
@@ -93,7 +93,7 @@ const questions = [
 
         title: "Hộp quà tỏ tình",
 
-        image: "/images/hopqua.JPG",
+        image: "images/hopqua.JPG",
 
         story: "Hộp giấy nâu, màu đỏ nhá. Người ta chọn cả buổi trưa đấy."
 
@@ -101,7 +101,7 @@ const questions = [
 }, 
 {
     question:"Lúc mở quà thì bị rơi đồ gì?",
-    image: "/images/doroi.jpg",
+    image: "images/doroi.jpg",
     options:[
         "Vòng tay",
         "Vòng cổ",
@@ -113,7 +113,7 @@ const questions = [
 
         title: "Đồ bị rơi",
 
-        image: "/images/vongtay.PNG",
+        image: "images/vongtay.PNG",
 
         story: "Đánh rơi mất cái vòng, còn lừa người ta không lên tìm để tự lên tìm nữa :)) Nhưng mà mất cũng may giờ có vòng tay mới"
 
@@ -121,7 +121,7 @@ const questions = [
 }, 
 {
     question:"Sinh nhật em anh tặng em quà gì?",
-    image: "/images/sinhnhat.JPG",
+    image: "images/sinhnhat.JPG",
     options:[
         "Cốc",
         "JellyCat",
@@ -133,7 +133,7 @@ const questions = [
 
         title: "Quà sinh nhật",
 
-        image: "/images/jellycat.JPG",
+        image: "images/jellycat.JPG",
 
         story: "Chọn quà này cũng lâu á, có cả video em unbox mà. Hôm ý bố đã đoán ra là tặng em rồi, mỗi tội mùi hơi coolfresh."
 
@@ -142,7 +142,7 @@ const questions = [
 
 {
     question:"Giáng sinh anh định tặng em cái gì đầu tiên?",
-    image: "/images/giangsinh.JPG",
+    image: "images/giangsinh.JPG",
     options:[
         "Cốc",
         "Không tặng gì",
@@ -154,7 +154,7 @@ const questions = [
 
         title: "Quà lúc đầu",
 
-        image: "/images/quagiangsinh.jpg",
+        image: "images/quagiangsinh.jpg",
 
         story: "Lúc đầu a định tặng cái sừng đấy, trêu e xong gặp luôn ở quán mới hay chứ."
 
@@ -162,7 +162,7 @@ const questions = [
 },
 {
     question:"Hộp quà valentine có bao nhiêu viên sicula?",
-    image: "/images/vlt.jpg",
+    image: "images/vlt.jpg",
     options:[
         "8",
         "9",
@@ -174,7 +174,7 @@ const questions = [
 
         title: "Hộp sicula",
 
-        image: "/images/sicula.JPG",
+        image: "images/sicula.JPG",
 
         story: "Đếm xem mấy viên :)) Hôm ý hơi ứ ừ đẹ. Với cả ăn sicuala hơi lâu nhá"
 
@@ -183,7 +183,7 @@ const questions = [
 
 {
     question:"Lần đầu hôn má là hôm nào?",
-    image: "/images/thomma1.JPG",
+    image: "images/thomma1.JPG",
     options:[
         "1/12",
         "8/12",
@@ -195,7 +195,7 @@ const questions = [
 
         title: "Hun má",
 
-        image: "/images/honma.JPG",
+        image: "images/honma.JPG",
 
         story: "Phần thưởng hơi rườm rà, cứ đợi nhân viên nó không nhìn. Chiều hôm ý còn đi ăn tacos."
 
@@ -203,7 +203,7 @@ const questions = [
 },
 {
     question:"Lần đầu hôn môi là khi nào?",
-    image: "/images/honmoi.JPG",
+    image: "images/honmoi.JPG",
     options:[
         "8/12",
         "9/12",
@@ -215,7 +215,7 @@ const questions = [
 
         title: "Hun môi",
 
-        image: "/images/honmoi1.JPG",
+        image: "images/honmoi1.JPG",
 
         story: "Sáng đi thi còn chiều hẹn thì phải. Tôi yêu đoán các nước hê hê. Lần đầu mà mắt cứ mở thô lố ra."
 
@@ -223,7 +223,7 @@ const questions = [
 },
 {
     question:"Lần đầu chụp ảnh photobooth là khi nào?",
-    image: "/images/ptb1.JPG",
+    image: "images/ptb1.JPG",
     options:[
         "24/03/2026",
         "25/03/2026",
@@ -235,7 +235,7 @@ const questions = [
 
         title: "PHOTOBOOTH",
 
-        image: "/images/ptb2.PNG",
+        image: "images/ptb2.PNG",
 
         story: "Đi xem phim ma, được ôm hơi nhìu, hơi bị thít hehe"
 
@@ -254,7 +254,7 @@ const questions = [
 
         title: "Chuyển sang mục tiếp theo",
 
-        image: "/images/nextpart.jpg",
+        image: "images/nextpart.jpg",
 
         story: "Sang phần tiếp theo xem sao"
 
