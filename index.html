@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mở khóa kỉ niệm ❤️</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="welcomeModal" class="modal">
+      <div class="modal-content">
+        <h2>💕 Chào bấy bì 💕</h2>
+
+        <p>
+          Anh đã chuẩn bị một hành trình nhỏ để cùng nhìn lại những kỷ niệm đẹp
+          của chúng mình💕
+        </p>
+
+        <p>🎵 Hãy bật âm lượng để có trải nghiệm trọn vẹn nhé ❤️</p>
+
+        <button id="startJourneyBtn">❤️ Bắt đầu hành trình ❤️</button>
+      </div>
+    </div>
+    <!-- Trái tim bay -->
+    <div class="floating-hearts">
+      <span>❤</span>
+      <span>💕</span>
+      <span>❤</span>
+      <span>💖</span>
+      <span>❤</span>
+    </div>
+
+    <div class="container">
+      <div class="game-card hidden">
+        <h1>💌 Mở Khóa Kỉ Niệm 💌</h1>
+
+        <p class="subtitle">
+          Trả lời đúng để mở khóa những kỷ niệm của chúng mình ❤️
+        </p>
+
+        <div id="heart-container">❤️ ❤️ ❤️</div>
+
+        <div id="progress">Câu 1 / 30</div>
+
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+
+        <div class="question-box">
+          <img id="question-image" src="" alt="Question Image" />
+          <h2 id="question">Lần đầu mình gặp nhau ở đâu?</h2>
+        </div>
+
+        <div id="answer-container">
+          <label class="option">
+            <input type="radio" name="answer" />
+            <span>Trường học</span>
+          </label>
+
+          <label class="option">
+            <input type="radio" name="answer" />
+            <span>Quán Cafe</span>
+          </label>
+
+          <label class="option">
+            <input type="radio" name="answer" />
+            <span>Rạp phim</span>
+          </label>
+
+          <label class="option">
+            <input type="radio" name="answer" />
+            <span>Công viên</span>
+          </label>
+        </div>
+
+        <button id="submitBtn">Xác nhận ❤️</button>
+      </div>
+    </div>
+    <div id="resultModal" class="modal hidden">
+      <div class="modal-content">
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalMessage"></p>
+
+        <button id="modalBtn">❤️ Tiếp tục hành trình ❤️</button>
+      </div>
+    </div>
+    <div id="memoryModal" class="modal hidden">
+      <div class="memory-card">
+        <h2 id="memoryTitle"></h2>
+
+        <img id="memoryImage" />
+
+        <p id="memoryStory"></p>
+
+        <button id="memoryBtn">❤️ Tiếp tục hành trình ❤️</button>
+      </div>
+    </div>
+
+    <div id="gameOverModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>💔 Hết lượt rồi...</h2>
+
+        <p>
+          Em tệ lắm :((
+          <br /><br />
+
+          Nhưng...
+          <br />
+
+          <strong style="color: #ff4d88"> Hun anh 1 miếng đi ❤️ </strong>
+
+          <br /><br />
+
+          Anh tặng em thêm một trái tim nhé ❤️
+        </p>
+
+        <button id="continueBtn">Tiếp tục</button>
+      </div>
+    </div>
+    <div id="recapModal" class="modal hidden">
+      <div class="memory-card recap">
+        <img id="recapImage" />
+      </div>
+    </div>
+    <div id="letterModal" class="modal hidden">
+      <div class="letter-card">
+        <h2>💌 Gửi em...</h2>
+
+        <div id="letterContent"></div>
+
+        <button id="finishBtn">❤️ Happy One Year ❤️</button>
+      </div>
+    </div>
+    <div id="endingScreen" class="hidden">
+      <div class="ending-content">
+        <div class="heart">❤️</div>
+
+        <h1>Happy One Year</h1>
+
+        <div class="date">07.07.2025</div>
+
+        <div class="arrow">↓</div>
+
+        <div class="date">07.07.2026</div>
+      </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+      <source src="music/background.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="recapMusic" loop>
+      <source src="music/recap.mp3" type="audio/mpeg" />
+    </audio>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>
