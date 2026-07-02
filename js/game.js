@@ -1,6 +1,7 @@
 let currentQuestion = 0;
 let lives = 3;
 const recapMusic = document.getElementById("recapMusic");
+const bgMusic = document.getElementById("bgMusic");
 
 function typeWriter(element, text, speed, callback) {
   let index = 0;
@@ -30,6 +31,7 @@ function typeWriter(element, text, speed, callback) {
 const tingSound = document.getElementById("tingSound");
 
 function startGame() {
+  console.log("START GAME");
   bgMusic.volume = 0.4;
 
   bgMusic.play().catch((err) => {
@@ -190,28 +192,36 @@ function finishGame() {
   switchToRecapMusic();
   showRecap();
 }
-function switchToRecapMusic() {
-  recapMusic.volume = 0;
+function switchToRecapMusic(){
 
-  recapMusic.currentTime = 0;
+    clearInterval(window.musicFadeInterval);
 
-  recapMusic.play();
+    bgMusic.pause();
 
-  const fade = setInterval(() => {
-    if (bgMusic.volume > 0) {
-      bgMusic.volume = Math.max(0, bgMusic.volume - 0.02);
-    }
+    bgMusic.currentTime = 0;
 
-    if (recapMusic.volume < 0.45) {
-      recapMusic.volume = Math.min(0.45, recapMusic.volume + 0.02);
-    }
+    bgMusic.volume = 0.4;
 
-    if (bgMusic.volume === 0 && recapMusic.volume === 0.45) {
-      bgMusic.pause();
+    recapMusic.pause();
 
-      clearInterval(fade);
-    }
-  }, 100);
+    recapMusic.currentTime = 0;
+
+    recapMusic.volume = 0;
+
+    recapMusic.play().catch(console.error);
+
+    window.musicFadeInterval = setInterval(()=>{
+
+        recapMusic.volume = Math.min(0.4, recapMusic.volume + 0.02);
+
+        if(recapMusic.volume >= 0.4){
+
+            clearInterval(window.musicFadeInterval);
+
+        }
+
+    },100);
+
 }
 function fadeOutMusic() {
   const fade = setInterval(() => {
@@ -315,8 +325,6 @@ document.getElementById("startJourneyBtn").onclick = function () {
     startGame();
   }, 500);
 };
-
-document.getElementById("submitBtn").addEventListener("click", checkAnswer);
 
 document.getElementById("submitBtn").addEventListener("click", checkAnswer);
 document.getElementById("memoryBtn").onclick = function () {
@@ -550,7 +558,7 @@ const letter = `
 Em à,
 Thời gian trôi nhanh thật, 2 năm quen em và 1 năm yêu em,
 Thời gian qua chúng ta trải qua nhiều chuyện, vui cũng có mà buồn cũng có, đặc biệt là cũng có nhiều lúc cãi vã giận dỗi.
-Thế nhưng mà dù trải qua truyện gì thì chúng mình cũng học cách hỏi han, tha thứ cho nhau để rồi thấu hiểu nhau hơn. 
+Thế nhưng mà dù trải qua chuyện gì thì chúng mình cũng học cách hỏi han, tha thứ cho nhau để rồi thấu hiểu nhau hơn. 
 Sau một năm, mình cũng trải qua được rất nhiều kỉ niệm, đây là một món quà nhỏ anh làm để chúng mình cùng nhìn lại những kỷ niệm ấy.
 Từng câu hỏi, từng bức ảnh, từng kỉ niệm...
 đều là những mảnh ghép của cuộc tình chúng mình trong một năm vừa qua
