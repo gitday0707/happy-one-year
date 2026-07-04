@@ -3,10 +3,10 @@ const questions = [
     question:"Lần đầu mình nhắn tin là khi nào?",
     image: "https://i.redd.it/rku3tl5b9mcb1.jpg",
     options:[
-        "20/07/2025",
-        "21/07/2025",
-        "22/07/2025",
-        "24/07/2025"
+        "20/07/2024",
+        "21/07/2024",
+        "22/07/2024",
+        "24/07/2024"
     ],
     answer:1, 
     memory: {
